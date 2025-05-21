@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# JavaScript Fundamentals (Days 8-14)
+# JavaScript Fundamentals (Days 1-14)
 TOPICS=(
   "JavaScript Basics – Variables & Data Types::Master var, let, const, and primitive types::Learn about variables, strings, numbers, booleans::Practice type conversion and basic operations"
   "Control Flow & Loops::Master if/else, switch, and loops::Understand logical operators::Practice different loop types"
@@ -8,7 +8,14 @@ TOPICS=(
   "Arrays & Array Methods::Master array manipulation::Learn map, filter, reduce::Practice array methods"
   "Objects & Object Methods::Learn object creation and methods::Understand prototypes::Practice object manipulation"
   "Error Handling & Debugging::Master try/catch blocks::Learn debugging techniques::Practice error handling"
-  "Asynchronous Basics::Understand callbacks::Learn Promise basics::Practice basic async code"
+  "DOM Basics::Learn DOM manipulation::Understand events::Practice DOM operations"
+  "Forms & Validation::Master form handling::Learn validation techniques::Practice user input"
+  "Local Storage::Understand browser storage::Learn data persistence::Practice storage operations"
+  "ES6+ Features::Master modern JS features::Learn new syntax::Practice modern patterns"
+  "Modules & Imports::Understand module system::Learn import/export::Practice organization"
+  "Async Programming::Master Promises::Learn async/await::Practice async patterns"
+  "API Integration::Understand REST::Learn fetch API::Practice API calls"
+  "Testing Basics::Learn testing concepts::Understand Jest basics::Practice unit tests"
 )
 
 # TypeScript & Advanced Concepts (Days 15-30)
@@ -97,67 +104,4 @@ PROJ_TOPICS=(
   "Advanced Concepts::Deep dive topics::Master concepts::Prepare examples"
   "Final Review::Review journey::Document growth::Plan future"
   "Celebration::Complete journey::Share success::Plan continuation"
-)
-
-create_issue() {
-  local day=$1
-  local index=$2
-  local topic_array=("${@:3}")
-  
-  # Parse the topic string
-  IFS="::" read -r title goals1 goals2 goals3 <<< "${topic_array[$index]}"
-  
-  # Format the day number with leading zeros
-  printf -v day_num "%03d" $day
-  
-  # Determine file extension based on day number
-  ext="js"
-  if [ $day -ge 15 ]; then
-    ext="ts"
-  fi
-  
-  # Create the issue body
-  body="### 📘 Topic  
-Day ${day_num}: ${title}
-
-### 🧠 Learning Goals
-- ${goals1}
-- ${goals2}
-- ${goals3}
-
-### 🧪 Tasks
-- [ ] Complete daily learning materials
-- [ ] Implement examples in \`day-${day_num}/exercises.${ext}\`
-- [ ] Write notes in \`day-${day_num}/notes.md\`
-- [ ] Summarize learnings in \`day-${day_num}/summary.md\`
-- [ ] Solve 2 Codewars katas and add to \`codewars/katas-day-${day_num}.${ext}\`
-
-### 🔁 Optional
-- [ ] Push your code to GitHub
-- [ ] Close this issue"
-
-  # Create the issue using gh cli
-  gh issue create --title "Day ${day_num}: ${title}" --body "$body"
-  
-  # Add a small delay to avoid rate limiting
-  sleep 1
-}
-
-# Create issues for each phase
-for i in {8..14}; do
-  create_issue $i $((i-8)) "${TOPICS[@]}"
-done
-
-for i in {15..30}; do
-  create_issue $i $((i-15)) "${TS_TOPICS[@]}"
-done
-
-for i in {31..60}; do
-  create_issue $i $((i-31)) "${ADV_TOPICS[@]}"
-done
-
-for i in {61..90}; do
-  create_issue $i $((i-61)) "${PROJ_TOPICS[@]}"
-done
-
-echo "✅ All issues created!" 
+) 
