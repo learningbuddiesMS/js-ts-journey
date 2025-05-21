@@ -75,13 +75,17 @@ Each day includes:
    # Create all day folders and files
    ./scripts/setup.sh
    
-   # Create GitHub issues for all days (requires GitHub CLI)
+   # Create milestones for tracking progress
+   ./scripts/create-milestones.sh
+   
+   # Create GitHub issues for all days
    ./scripts/create-issues.sh
    ```
 
-   Note: To use the `create-issues.sh` script, you need to:
+   Note: To use the GitHub-related scripts, you need to:
    - Install GitHub CLI: https://cli.github.com/
    - Authenticate with: `gh auth login`
+   - Have proper repository permissions
 
 ## 📝 Progress Tracking
 
