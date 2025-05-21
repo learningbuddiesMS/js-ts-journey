@@ -16,8 +16,8 @@ create_issue() {
   # Parse the topic string
   IFS="::" read -r title goals1 goals2 goals3 <<< "${topic_array[$index]}"
   
-  # Format the day number with leading zeros
-  printf -v day_num "%03d" $day
+  # Format the day number with leading zeros (2 digits)
+  printf -v day_num "%02d" $day
   
   # Determine file extension based on day number
   ext="js"

@@ -10,8 +10,8 @@ create_day_structure() {
   local day=$1
   local ext=$2
   
-  # Format day number with leading zeros
-  printf -v day_num "%03d" $day
+  # Format day number with leading zeros (2 digits)
+  printf -v day_num "%02d" $day
   
   echo -e "${BLUE}→ Setting up day-${day_num}${NC}"
   
@@ -31,15 +31,15 @@ mkdir -p codewars
 mkdir -p projects
 mkdir -p ts
 
-# Create days 001-090
-echo -e "${BLUE}📁 Creating folders and files for days 001-090...${NC}"
+# Create days 01-90
+echo -e "${BLUE}📁 Creating folders and files for days 01-90...${NC}"
 
-# Days 001-014: JavaScript
+# Days 01-14: JavaScript
 for i in $(seq 1 14); do
   create_day_structure $i "js"
 done
 
-# Days 015-090: TypeScript
+# Days 15-90: TypeScript
 for i in $(seq 15 90); do
   create_day_structure $i "ts"
 done

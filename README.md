@@ -39,12 +39,13 @@ This repository documents my 90-day journey to master JavaScript and TypeScript.
 
 ```
 .
-├── day-XXX/              # Daily work directories
-│   ├── exercises.js/ts   # Code examples and exercises
+├── day-XX/              # Daily work directories (XX = 01-90)
+│   ├── exercises.js/ts  # Code examples and exercises
 │   ├── notes.md         # Learning notes
 │   └── summary.md       # Daily summary
 ├── codewars/            # Codewars kata solutions
 ├── projects/            # Larger project work
+├── scripts/             # Setup and utility scripts
 └── ts/                  # TypeScript-specific content
 ```
 
@@ -69,7 +70,18 @@ Each day includes:
    cd js-ts-journey
    ```
 
-3. Check the daily issues for tasks and learning goals.
+3. Set up the learning environment:
+   ```bash
+   # Create all day folders and files
+   ./scripts/setup.sh
+   
+   # Create GitHub issues for all days (requires GitHub CLI)
+   ./scripts/create-issues.sh
+   ```
+
+   Note: To use the `create-issues.sh` script, you need to:
+   - Install GitHub CLI: https://cli.github.com/
+   - Authenticate with: `gh auth login`
 
 ## 📝 Progress Tracking
 
