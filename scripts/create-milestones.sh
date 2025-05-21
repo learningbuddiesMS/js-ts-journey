@@ -37,13 +37,9 @@ for i in "${!MILESTONE_TITLES[@]}"; do
   esac
   
   # Create milestone using GitHub CLI
-  gh api \
-    --method POST \
-    -H "Accept: application/vnd.github+json" \
-    /repos/:owner/:repo/milestones \
-    -f title="$title" \
-    -f description="$description" \
-    -f due_on="${due_date}T23:59:59Z"
+  gh milestone create "$title" \
+    --description "$description" \
+    --due-date "${due_date}T23:59:59Z"
 done
 
 echo -e "${GREEN}✅ All milestones created!${NC}" 
