@@ -4,7 +4,7 @@ This repository documents my 90-day journey to master JavaScript and TypeScript.
 
 ## 📚 Journey Structure
 
-### Phase 1: JavaScript Fundamentals (Days 001-014)
+### Phase 1: JavaScript Fundamentals (Days 01-14)
 - Basic syntax and concepts
 - Variables and data types
 - Control flow and functions
@@ -12,7 +12,7 @@ This repository documents my 90-day journey to master JavaScript and TypeScript.
 - Error handling
 - Asynchronous basics
 
-### Phase 2: TypeScript & Advanced Concepts (Days 015-030)
+### Phase 2: TypeScript & Advanced Concepts (Days 15-30)
 - TypeScript fundamentals
 - Types and interfaces
 - Classes and OOP
@@ -20,7 +20,7 @@ This repository documents my 90-day journey to master JavaScript and TypeScript.
 - Project organization
 - Testing basics
 
-### Phase 3: Advanced Web Development (Days 031-060)
+### Phase 3: Advanced Web Development (Days 31-60)
 - Advanced DOM manipulation
 - Browser APIs
 - Design patterns
@@ -28,7 +28,7 @@ This repository documents my 90-day journey to master JavaScript and TypeScript.
 - Security practices
 - Modern web features
 
-### Phase 4: Real-world Projects (Days 061-090)
+### Phase 4: Real-world Projects (Days 61-90)
 - Full-stack development
 - Project planning and architecture
 - Testing and deployment
