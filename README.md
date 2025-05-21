@@ -62,7 +62,7 @@ Each day includes:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/js-ts-journey.git
+   git clone https://github.com/learningbuddiesMS/js-ts-journey.git
    ```
 
 2. Navigate to the project:
