@@ -85,7 +85,19 @@ Each day includes:
 
 ## 📝 Progress Tracking
 
-Progress is tracked through GitHub issues. Each day has its own issue with:
+Progress is tracked through GitHub issues and milestones:
+
+### 🎯 Milestones
+The journey is divided into four main phases:
+1. **JavaScript Fundamentals** (Days 01-14)
+2. **TypeScript & Advanced Concepts** (Days 15-30)
+3. **Advanced Web Development** (Days 31-60)
+4. **Real-world Projects** (Days 61-90)
+
+Each issue is assigned to its corresponding milestone, helping you track progress through each phase.
+
+### 📋 Daily Issues
+Each day has its own issue with:
 - Topic and learning goals
 - Specific tasks to complete
 - Links to resources
