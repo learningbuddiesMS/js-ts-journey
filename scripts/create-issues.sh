@@ -13,7 +13,7 @@ get_milestone_number() {
   local title=$1
   gh api \
     -H "Accept: application/vnd.github+json" \
-    "/repos/:owner/:repo/milestones" \
+    /repos/learningbuddiesMS/js-ts-journey/milestones \
     --jq ".[] | select(.title == \"$title\") | .number"
 }
 
@@ -64,6 +64,7 @@ Day ${day_num}: ${title}
   if [ -n "$milestone_number" ]; then
     gh issue create --title "Day ${day_num}: ${title}" --body "$body" --milestone "$milestone_number"
   else
+    echo -e "${BLUE}Warning: Could not find milestone number for ${milestone_title}${NC}"
     gh issue create --title "Day ${day_num}: ${title}" --body "$body"
   fi
   
